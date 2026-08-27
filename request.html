@@ -32,18 +32,18 @@
     <h2 class="head-title">Project details</h2>
     <p>You'll hear back to confirm scope and timeline.</p>
 
-    <form id="requestForm">
+    <form id="requestForm" action="https://formspree.io/f/xeaqjppe" method="POST">
       <div>
         <label for="name">Your name</label>
-        <input type="text" id="name" placeholder="Jane Doe" required>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="jane@email.com" required>
+        <input type="email" id="email" name="email" placeholder="jane@email.com" required>
       </div>
       <div>
         <label for="type">Project type</label>
-        <select id="type">
+        <select id="type" name="project_type">
           <option>Website</option>
           <option>Web application</option>
           <option>E-commerce store</option>
@@ -52,7 +52,7 @@
       </div>
       <div>
         <label for="budget">Budget range</label>
-        <select id="budget">
+        <select id="budget" name="budget">
           <option>Under $300</option>
           <option>$300 – $1,000</option>
           <option>$1,000 – $3,000</option>
@@ -62,7 +62,7 @@
       </div>
       <div class="full">
         <label for="details">Project details</label>
-        <textarea id="details" placeholder="What are you trying to build? Who's it for? Any must-have features?" required></textarea>
+        <textarea id="details" name="details" placeholder="What are you trying to build? Who's it for? Any must-have features?" required></textarea>
       </div>
       <div class="full submit-row">
         <button type="submit" class="btn btn-primary">Send request →</button>
@@ -84,16 +84,7 @@
 <footer>
   <div class="brand">SAB JNR DEV</div>
   <p>Full-stack web developer — concept to production.</p>
-  <a href="#" class="admin-link" id="adminOpen">view submissions →</a>
 </footer>
-
-<div class="admin-overlay" id="adminOverlay">
-  <div class="admin-box">
-    <h3>Project requests</h3>
-    <div id="adminList"></div>
-    <button class="btn btn-ghost admin-close" id="adminClose">Close</button>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
